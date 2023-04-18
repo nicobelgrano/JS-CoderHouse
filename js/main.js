@@ -8,12 +8,12 @@ let opcion;
 alert("Bienvenidx a la Calculadora");
 
 do{
-    material = prompt("Ingrese el material del articulo, puede ser:\n Plata 925\n Enchapado en oro\n Laminado en plata");
+    material = prompt("Ingrese el material del articulo, puede ser:\n Plata 925\n Enchapado en oro\n Laminado en plata").toLowerCase();
 
 
     
     while (material != "plata 925" && material != "enchapado en oro" && material != "laminado en plata"){
-        material = prompt("Material inválido, ingrese un material correcto, puede ser:\n Plata 925\n Enchapado en oro\n Laminado en plata");
+        material = prompt("Material inválido, ingrese un material correcto, puede ser:\n Plata 925\n Enchapado en oro\n Laminado en plata").toLowerCase();
     }
 
 
