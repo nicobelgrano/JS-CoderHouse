@@ -1,30 +1,21 @@
 let material;
 let peso;
-let valor = 0;
+let valor;
 const ganancia = 1.6;
 let total;
 let opcion;
 
 alert("Bienvenidx a la Calculadora");
 
-
 do{
-    material = prompt("Ingrese el material del articulo, puede ser:\n plata 925\n enchapado en oro\n laminado en plata");
+    material = prompt("Ingrese el material del articulo, puede ser:\n Plata 925\n Enchapado en oro\n Laminado en plata");
 
-    //ESTO NO FUNCIONO!!!!!
+
     
-    /*while (material != "plata 925"  || material != "enchapado en oro"  || material != "laminado en plata");
-    {
-        material = prompt("material invalido, ingrese un material correcto, puede ser:\n plata 925\n enchapado en oro\n laminado en plata");
+    while (material != "plata 925" && material != "enchapado en oro" && material != "laminado en plata"){
+        material = prompt("Material inválido, ingrese un material correcto, puede ser:\n Plata 925\n Enchapado en oro\n Laminado en plata");
     }
 
-    if (material == "plata 925"){
-        valor = 1.5
-    }else if (material == "enchapado en oro"){
-        valor = 0.4
-    }else if (material == "laminado en plata"){
-        valor = 0.35
-    }*/
 
     switch (material){
         case "plata 925":
@@ -38,10 +29,6 @@ do{
         case "laminado en plata":
             valor = 0.35;
             break;
-
-        default:
-            material = prompt("material invalido, ingrese un material correcto, puede ser:\n plata 925\n enchapado en oro\n laminado en plata");
-            break;
     }
 
 
@@ -49,16 +36,13 @@ do{
 
 
     while(peso <= 0){
-        peso = Number(prompt("Peso invalido, ingrese un peso mayor a 0"));
+        peso = Number(prompt("Peso inválido, ingrese un peso mayor a 0"));
         }
-    
-    
 
-    total = peso * valor * ganancia;
+    total = (peso * valor * ganancia).toFixed(2);
 
+    alert ( "El precio para la venta del producto es de USD$" + total)
 
-alert ( "El precio para la venta del producto es de " + "usd$" + total)
+    opcion = prompt("¿Desea realizar otro cálculo?").toLowerCase();
 
-opcion = prompt("desea realizar otro calculo?")
-
-} while (opcion == "si"  || opcion == "Si" || opcion == "SI" || opcion == "S" || opcion == "s");
+} while (opcion == "si" || opcion == "s");
